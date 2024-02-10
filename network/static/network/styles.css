@@ -1,0 +1,423 @@
+/* Global */
+/* Global Pagination */
+/* .pagination {
+  margin-top: 20px;
+} */
+
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.pagination .page-link {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 2px;
+  font-weight: 200;
+  /* text-transform: uppercase; */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pagination .page-link:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Global Posts */
+/* CSS for post layout */
+.post {
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  margin-bottom: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.post-header strong {
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+.post-header span {
+  font-size: 14px;
+  color: #777;
+}
+
+.post-content p {
+  font-size: 16px;
+  margin: 0;
+  color: #444;
+}
+.post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.post-content {
+  text-align: left;
+}
+
+/* Post Metadata Styles */
+.post-meta {
+  font-size: 14px;
+  color: #888;
+}
+
+/* To style the "Save" and "Cancel" buttons when the editing mode is active, use a class like 'editing' on the post element */
+.post.editing .save-button,
+.post.editing .cancel-button {
+  display: inline-block;
+}
+
+.post.editing .edit-textarea {
+  display: block;
+}
+
+/* You can also style the post in an editing state differently if desired */
+.post.editing {
+  border: 1px solid #3498db; /* Change border color for clarity */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.left-buttons {
+  display: flex;
+  align-items: center;
+}
+
+
+.like-button, .edit-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #3498db; /* Like button color */
+  transition: color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.likes-count {
+  font-weight: 600;
+  font-size: 16px;
+  color: #555;
+}
+
+
+/* ---PROFILE PAGE *********************************************************/
+/* ---############ *********************************************************/
+/* Apply CSS styles to the profile page content */
+#profile-content {
+  /* Add your CSS styles for the profile page here */
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#profile-content h2 {
+  /* font-size: 24px; */
+  margin: 20px 0;
+  color: #333;
+}
+
+#profile-content p {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #555;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Follow Button Styles (inside the profile content) */
+#follow-button {
+  border: 1px solid rgb(70, 70, 70);
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  width: 120px; 
+  
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add smooth transitions */
+}
+
+#follow-button.follow {
+  padding: 5px 10px;
+  background-color: #007bff;
+  font-weight: bold; /* Make the text bold to draw attention */
+  color: #fff;
+}
+
+#follow-button.unfollow {
+  opacity: 30%;
+  padding: 1px 3px;
+  margin-top: 8px;
+  background-color: #cdcdcd;
+  font-weight: normal;
+  color: #333; /* Use a neutral color for text to make it less exciting */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transitions to the unfollow button */
+}
+
+#follow-button.follow:hover {
+  background-color: #0056b3; 
+}
+
+#follow-button.unfollow:hover {
+  background-color: #b3b3b3; 
+  color: #333; 
+}
+
+
+
+/* Post List Styles */
+#post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-group-item {
+  border: none;
+  margin: 5px 0;
+  padding: 15px;
+  background-color: #f8f9fa; /* Background color for post items */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* Timestamp Styles */
+.timestamp {
+  font-weight: bold;
+}
+
+/* Number of Likes Styles */
+.likes {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #007bff; /* Color for likes count */
+}
+
+
+/* ---ALL POSTS PAGE *********************************************************/
+/* ---############## *********************************************************/
+/* Style for the page title */
+.page-title {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Style for the New Post form */
+.new-post-form {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Style for the textarea in the form */
+.new-post-form textarea.form-control {
+    resize: none;
+}
+
+/* Style for the "Post" button */
+.new-post-form button.btn-primary {
+    margin-top: 10px;
+}
+
+
+/* CSS animation for success message */
+@keyframes feedbackMsgAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+.success-animation {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding for the success message */
+  border-radius: 5px;
+  animation: feedbackMsgAnimation 1s ease-in-out; /* Apply the animation */
+  display: none; /* Initially hidden */
+}
+
+/* CSS for error message */
+.error-animation {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #FF5733; /* Red background color for error */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding for the error message */
+  border-radius: 5px;
+  animation: feedbackMsgAnimation 1s ease-in-out; /* Apply the animation */
+  display: none; /* Initially hidden */
+}
+
+
+
+
+
+.like-button span, .edit-button span {
+  margin-right: 5px;
+}
+
+.like-button:hover, .edit-button:hover {
+  color: #1f5c84;
+}
+
+
+
+/* Save button (hidden by default) */
+.save-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #3498db; /* Blue color for save button */
+  padding: 5px 10px;
+  margin-right: 10px; /* Adjust as needed */
+}
+
+/* Cancel button (hidden by default) */
+.cancel-button {
+  background: none ;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #888; /* Gray color for cancel button */
+  padding: 5px 10px;
+  margin-right: 10px; /* Adjust as needed */
+}
+
+/* Textarea for editing */
+.edit-textarea {
+  width: 100%;
+  height: 100px; /* Adjust as needed */
+  font-size: 16px;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+
+/* ---FOLLOWING PAGE *********************************************************/
+/* ---############## *********************************************************/
+.following-page {
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.following-page header {
+  /* background-color: #fff;  */
+  color: #333; /* Dark text color for contrast */
+  text-align: center;
+  padding: 20px;
+  font-size: 18px; /* Smaller text size */
+}
+
+
+/* ---Login/Register PAGE *********************************************************/
+/* ---################### *********************************************************/
+/* Shared styles for both login and register pages */
+#login-page,
+#register-page {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+#login-page h2,
+#register-page h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#login-page .form-group,
+#register-page .form-group {
+    margin-bottom: 15px;
+}
+
+#login-page input,
+#register-page input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#login-page .btn,
+#register-page .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007AFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#login-page .btn:hover,
+#register-page .btn:hover {
+    background-color: #0056b3;
+}
+
+#login-page a,
+#register-page a {
+    display: block;
+    margin-top: 15px;
+    color: #007AFF;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+#login-page a:hover,
+#register-page a:hover {
+    color: #0056b3;
+}

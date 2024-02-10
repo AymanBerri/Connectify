@@ -1,0 +1,57 @@
+<!-- templates/network/profile.html -->
+{% extends 'network/layout.html' %}
+
+{% block page_type %}profile{% endblock %}
+
+{% block title %}
+    {{ user_data.username }}'s Profile
+{% endblock %}
+
+{% block body %}
+    <div id="profile-content">
+
+        {% csrf_token %}
+        
+
+        <div id="profile-content-header">
+            <h2 id="username">{{ user_data.username }}</h2>
+        </div>
+    
+
+        <hr>
+        <!-- Looping through the rendered user posts and printing them. -->
+        <h4>{{ user_data.username }}'s posts</h4>
+
+        <!-- Display Posts -->
+        <div class="post-list">
+        </div>
+
+        <!-- Pagination Container -->
+        <div class="pagination-container">
+        </div>
+
+        <!-- <ul id="post-list" class="list-group">
+            {% for post in user_posts_page %}
+            <li class="list-group-item">
+                <div class="post-content">
+                    {% if post.content|length <= 200 %}
+                        {{ post.content }}
+                    {% else %}
+                        {{ post.content|slice:":200"|safe }}
+                        <a href="#" class="read-more-link">... Read More</a>
+                        <span class="hidden-content" style="display: none;">{{ post.content|slice:"200:"|safe }}</span>
+                        <a href="#" class="read-less-link" style="display: none;">Read Less</a>
+                    {% endif %}
+                </div>
+                
+                <!-- Post Metadata -->
+                <div class="post-meta">
+                    <span class="timestamp">{{ post.timestamp }}</span> <!-- Display timestamp -->
+                    <span class="likes">{{ post.get_likes_count }} <i class="fas fa-thumbs-up"></i></span> <!-- Display likes count -->
+                </div>
+            </li>
+            {% endfor %}
+        </ul> -->
+    </div>
+    
+{% endblock %}

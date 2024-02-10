@@ -1,0 +1,24 @@
+# SERVER-SIDE TESTING USING GITHUB ACTIONS
+name: Testing
+on: push
+
+jobs:
+  test_project:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: |
+        pip install Django
+        pip install djangorestframework
+
+
+    - name: Run Django tests
+      run: python manage.py test

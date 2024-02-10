@@ -1,0 +1,33 @@
+{% extends "network/layout.html" %}
+
+{% block page_type %}index{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2 class="page-title">All Posts</h2>
+        <!-- New Post Form -->
+        <div class="new-post-form">
+            <h3>Create a New Post</h3>
+
+            <div id="feedback-animation"></div>
+
+            <form id="create-new-post-form" method="POST" action="#">
+                {% csrf_token %}
+                <div class="form-group">
+                    <textarea class="form-control" name="content" id="content-input" rows="3" placeholder="What's on your mind?"></textarea>
+                </div>
+                <button type="submit" id="submit-new-post-button" class="btn btn-primary">Post</button>
+            </form>
+        </div>
+        <hr>
+
+       <!-- Display Posts -->
+        <div class="post-list">
+        </div>
+
+        <!-- Pagination Container -->
+        <div class="pagination-container">
+        </div>
+        
+    </div>
+{% endblock %}
